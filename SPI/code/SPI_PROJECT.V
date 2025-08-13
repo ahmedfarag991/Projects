@@ -34,7 +34,6 @@ module SPI_SLAVE #(parameter IDLE=0,READ_DATA=1,READ_ADD=2,CHK_CMD=3,WRITE=4)
 input [7:0] tx_data,
 output reg rx_valid,MISO,
 output reg[9:0]rx_data);
-(* fsm_encoding = "sequential" *)
 reg [2:0]cs,ns;
 reg READ_FLAG;
 reg [3:0] count;
@@ -177,6 +176,7 @@ RAM RAM1(.clk(clk),.rst_n(rst_n),.din(rx_data),.rx_valid(rx_valid),.dout(tx_data
 SPI_SLAVE SPI(.clk(clk),.rst_n(rst_n),.MOSI(MOSI),.SS_n(SS_n),.MISO(MISO),.tx_data(tx_data),.tx_valid(tx_valid)
 ,.rx_data(rx_data),.rx_valid(rx_valid));
 endmodule
+
 
 
 
