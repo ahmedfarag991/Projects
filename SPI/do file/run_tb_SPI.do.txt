@@ -1,0 +1,21 @@
+vlib work
+vlog tb_SPI.V
+vsim -voptargs=+acc work.tb_SPI
+add wave *
+add wave -position insertpoint \
+sim:/tb_SPI/dut/RAM1/tx_valid  \
+sim:/tb_SPI/dut/RAM1/mem \
+sim:/tb_SPI/dut/RAM1/addr_RD \
+sim:/tb_SPI/dut/RAM1/addr_WR \
+sim:/tb_SPI/dut/SPI/tx_data \
+sim:/tb_SPI/dut/SPI/rx_data \
+sim:/tb_SPI/dut/SPI/rx_valid \
+sim:/tb_SPI/dut/SPI/MISO_BUS  \
+sim:/tb_SPI/dut/SPI/MOSI_BUS  \
+sim:/tb_SPI/dut/SPI/cs \
+sim:/tb_SPI/dut/SPI/count \
+sim:/tb_SPI/dut/SPI/count2 \
+sim:/tb_SPI/dut/SPI/READ_FLAG
+
+run -all
+#quit -sim
