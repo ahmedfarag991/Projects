@@ -96,24 +96,5 @@ The design was developed and verified using **Verilog HDL** as the hardware desc
 
 ---
 
-## File Structure
-
-```
-SPI_Slave_RAM/
-├── rtl/
-│   └── SPI_PROJECT.V       # All three modules: RAM, SPI_SLAVE, SPI_wrapper
-├── tb/
-│   └── tb_SPI.V            # Verilog testbench
-├── sim/
-│   └── waveforms/          # ModelSim simulation screenshots
-├── reports/
-│   ├── lint/               # Questa Lint results
-│   ├── synthesis/          # Synthesis reports (gray / one_hot / sequential)
-│   ├── implementation/     # Implementation reports (gray / one_hot / sequential)
-│   └── SPI_report.pdf      # Full project documentation
-└── README.md
-```
-
----
 
 *Designed and implemented by Ahmed Farag*
